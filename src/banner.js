@@ -51,6 +51,19 @@ class Surname extends React.Component
     }
 }
 
+class Arrow extends React.Component
+{
+    render()
+    {
+        return(
+            <div className="arrow-container">
+                <div className="arrow"></div>
+                <div className="arrow"></div>
+            </div>
+        );
+    }
+}
+
 class Banner extends React.Component
 {
     constructor(props)
@@ -85,7 +98,7 @@ class Banner extends React.Component
                     <div className="first">anakin</div>
                     <Surname expand={this.state.expand} />
                 </div>
-                <div className="desc">coming soon</div>
+                <Arrow />
             </div>
         );
     }

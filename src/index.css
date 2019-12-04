@@ -1,3 +1,31 @@
+@keyframes ghost
+{
+  0%
+  {
+    opacity: 0;
+  }
+  33%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0;
+  }
+  to
+  {
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,14 +34,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(120deg, #333, #111);
+  background: #111;
   color: #E3D8F1;
+  overflow-x: hidden;
 }
 
 code {
   font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*********************/
+/******* BANNER ******/
+/*********************/
 
 .banner
 {
@@ -82,3 +115,55 @@ code {
   font-size: 20px;
 }
 
+.arrow
+{
+  width: 100px;
+  height: 30px;
+  border: 1px solid white;
+  background: rgba(123,45,67,0.5);
+}
+
+.arrow:first-child
+{
+  animation: 5s ease-in infinite ghost;
+}
+
+.arrow:last-child
+{
+  animation: 5s ease-in 0.2s infinite ghost;
+}
+
+/*********************/
+/******* ABOUT *******/
+/*********************/
+
+.about
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: #E3D8F1;
+  padding: 20px;
+}
+
+.heading
+{
+  font-size: 60px;
+  font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-weight: bold;
+  background: -webkit-linear-gradient(90deg, #FDB99B, #F05D5E);
+  background: linear-gradient(90deg, #FDB99B, #F05D5E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: flex-start;
+}
+
+.fadeIn
+{
+  animation: 1s ease-out fadeIn;
+}
