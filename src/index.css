@@ -7,12 +7,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(120deg, #333, #111);
-  color: #eeeeee;
+  color: #E3D8F1;
 }
 
 code {
   font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.banner
+{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-center
@@ -31,14 +41,44 @@ code {
   font-size: 60px;
   font-family: Hack, Menlo, source-code-pro, Consolas, monospace;
   font-weight: bold;
-  background: -webkit-linear-gradient(0deg, #A770EF, #CF8BF3, #FDB99B);
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.hero .first
+{
+  display: inline-block;
+  background: -webkit-linear-gradient(90deg, #A770EF, #CF8BF3, #FDB99B);
   background: linear-gradient(90deg, #A770EF, #CF8BF3, #FDB99B);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 1s;
+}
+
+.hero .sur
+{
+  display: inline-block;
+  color: #F05D5E;
+  background: -webkit-linear-gradient(90deg, #FDB99B, #F05D5E);
+  background: linear-gradient(90deg, #FDB99B, #F05D5E);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s;
+  margin-left: 0%;
+}
+
+.hero .sur.expand
+{
+  margin-left: 5%;
 }
 
 .desc
 {
   font-size: 20px;
 }
+
