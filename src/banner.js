@@ -23,6 +23,10 @@ class Surname extends React.Component
         this.setState({
             text: this.state.text + fulltext[count++]
         });
+        if (count == fulltext.length)
+        {
+            this.props.onAnimationFinish();    
+        }
     }
 
     componentDidMount()
@@ -30,7 +34,7 @@ class Surname extends React.Component
         //console.log(this.state.mounted)
         for(let i=1; i<fulltext.length; i++)
         {
-            setTimeout(this.playAnimation, 2000 + 150*i);
+            setTimeout(this.playAnimation, 2000 + 150 * i);
         }
     }
 
@@ -53,10 +57,16 @@ class Surname extends React.Component
 
 class Arrow extends React.Component
 {
+    constructor(props)
+    {
+        super(props);
+    }
+
     render()
     {
-        return(
-            <div className="arrow-container">
+        const animate = (this.props.animationFinish) ? "arrow-container active" : "arrow-container";
+        return (
+            <div className={animate}>
                 <div className="arrow"></div>
                 <div className="arrow"></div>
             </div>
@@ -70,9 +80,11 @@ class Banner extends React.Component
     {
         super(props);
         this.state = {
-            expand: false
+            expand: false,
+            animationFinish: false
         };
-        this.playAnimation  = this.playAnimation.bind(this);
+        this.playAnimation = this.playAnimation.bind(this);
+        this.handleAnimationFinish = this.handleAnimationFinish.bind(this);
     }
 
     componentDidMount()
@@ -90,15 +102,23 @@ class Banner extends React.Component
         });
     }
 
+    handleAnimationFinish()
+    {
+        this.setState({
+            animationFinish: true
+        });
+        //console.log("done");
+    }
+
     render()
     {
         return(
             <div className="banner" onLoadedData={this.onLoad}>
                 <div className="hero">
                     <div className="first">anakin</div>
-                    <Surname expand={this.state.expand} />
+                    <Surname expand={this.state.expand} onAnimationFinish={this.handleAnimationFinish}/>
                 </div>
-                <Arrow />
+                <Arrow animationFinish={this.state.animationFinish}/>
             </div>
         );
     }

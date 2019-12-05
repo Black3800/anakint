@@ -1,5 +1,5 @@
 import React from 'react';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 class Heading extends React.Component
 {
@@ -18,7 +18,7 @@ class Heading extends React.Component
     render()
     {
         return(
-        <div className={this.props.cs}>{this.props.text}</div>
+        <div className="heading">{this.props.text}</div>
         );
     }
 }
@@ -29,9 +29,11 @@ class About extends React.Component
     {
         return (
             <div className="about">
-                <Zoom style="justify-self: center; align-self: center">
-                    <Heading text="about_me" cs="heading fadeIn" />
-                </Zoom>
+                <div>
+                    <Fade>
+                        <Heading text="about_me" />
+                    </Fade>
+                </div>
             </div>
         );
     }
