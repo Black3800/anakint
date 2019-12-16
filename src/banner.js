@@ -1,4 +1,5 @@
 import React from 'react';
+import { Section } from 'react-fullpage';
 
 let fulltext = 'thanainantha';
 let count = 1;
@@ -23,7 +24,7 @@ class Surname extends React.Component
         this.setState({
             text: this.state.text + fulltext[count++]
         });
-        if (count == fulltext.length)
+        if (count === fulltext.length)
         {
             this.props.onAnimationFinish();    
         }
@@ -64,12 +65,12 @@ class Arrow extends React.Component
 
     render()
     {
-        const animate = (this.props.animationFinish) ? "arrow-container active" : "arrow-container";
+        const animate = (this.props.animationFinish) ? "arrow-container ghosting" : "arrow-container";
         return (
-            <div className={animate}>
+            <a href="#aboutme" className={animate}>
                 <div className="arrow"></div>
                 <div className="arrow"></div>
-            </div>
+            </a>
         );
     }
 }
@@ -113,7 +114,7 @@ class Banner extends React.Component
     render()
     {
         return(
-            <div className="banner" onLoadedData={this.onLoad}>
+            <div className="banner content-card">
                 <div className="hero">
                     <div className="first">anakin</div>
                     <Surname expand={this.state.expand} onAnimationFinish={this.handleAnimationFinish}/>

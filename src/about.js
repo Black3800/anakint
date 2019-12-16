@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+//import { Section } from 'react-fullpage';
 
 class Heading extends React.Component
 {
@@ -28,7 +29,7 @@ class About extends React.Component
     render()
     {
         return (
-            <div className="about">
+            <div className="about content-card">
                 <div>
                     <Fade>
                         <Heading text="about_me" />

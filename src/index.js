@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import ReactFullpage from '@fullpage/react-fullpage';
+import { SectionsContainer, Section } from 'react-fullpage';
 import './index.css';
 import Banner from './banner.js';
 import About from './about.js';
+import Code from './code.js';
+import Design from './design.js';
+import Hack from './hack.js';
+import Music from './music.js';
+import Skills from './skills.js';
+import Achievements from './achievements.js';
+import Interests from './interests.js';
+import Contact from './contact.js';
 
 class App extends React.Component
 {
@@ -34,12 +44,42 @@ class App extends React.Component
     render()
     {
         //const { scrollTop } = this.state;
-        return(
-            <div class="App" ref={this.myRef} /*onScroll={this.onScroll}*/>
-                <Banner />
-                <About />
-            </div>
+
+        let options = {
+            sectionClassName:       'section',
+            activeClass:            'active',
+            anchors:                ['anakint', 'aboutme', 'aboutme2'],
+            scrollBar:              false,
+            navigation:             true,
+            verticalAlign:          false,
+            sectionPaddingTop:      '0px',
+            sectionPaddingBottom:   '0px',
+            arrowNavigation:        true,
+            delay:                  1000
+        };
+
+        return (
+            <SectionsContainer id="App" class="App" ref={this.myRef} /*onScroll={this.onScroll}*/ {...options}>
+                <Section>
+                    <Banner />
+                </Section>
+                <Section>
+                    <About />
+                </Section>
+                <Section>
+                    <Code />
+                </Section>
+            </SectionsContainer>
         );
+
+                /*<Code />
+                <Design />
+                <Hack />
+                <Music />
+                <Skills />
+                <Achievements />
+                <Interests />
+                <Contact />*/
     }
 }
 

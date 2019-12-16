@@ -1,3 +1,40 @@
+/*********************/
+/******* GLOBAL ******/
+/*********************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #111;
+  color: #E3D8F1;
+  /*overflow: hidden;*/
+}
+
+code {
+  font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.section
+{
+  overflow: hidden!important;
+}
+
+.content-card
+{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*********************/
+/******* BANNER ******/
+/*********************/
+
 @keyframes ghost
 {
   0%
@@ -26,32 +63,8 @@
   }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #111;
-  color: #E3D8F1;
-  overflow-x: hidden;
-}
-
-code {
-  font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-/*********************/
-/******* BANNER ******/
-/*********************/
-
 .banner
 {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -117,12 +130,13 @@ code {
 
 .arrow-container
 {
+  display: block;
   opacity: 0;
   margin-top: -60px;
   transition: opacity 5s cubic-bezier(0.645, 0.045, 0.355, 1), margin-top 5s cubic-bezier(0.645, 0.045, 0.355, 1); 
 }
 
-.arrow-container.active
+.arrow-container.ghosting
 {
   opacity: 1;
   margin-top: 10%;
@@ -153,8 +167,6 @@ code {
 
 .about
 {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-flow: column wrap;
   align-items: flex-start;
@@ -181,4 +193,19 @@ code {
 .fadeIn
 {
   animation: 1s ease-out fadeIn;
+}
+
+/*********************/
+/******* CODE ********/
+/*********************/
+
+.code
+{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #FDB99B;
+  padding: 20px;
+  box-sizing: border-box;
 }
