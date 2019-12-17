@@ -8,10 +8,7 @@ import About from './about.js';
 import Code from './code.js';
 import Design from './design.js';
 import Hack from './hack.js';
-import Music from './music.js';
 import Skills from './skills.js';
-import Achievements from './achievements.js';
-import Interests from './interests.js';
 import Contact from './contact.js';
 
 class App extends React.Component
@@ -32,7 +29,7 @@ class App extends React.Component
         console.log(`onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${scrollTop}`)
         this.setState({
             scrollTop: scrollTop
-        })
+        });
         //console.log(e);
     }*/
 
@@ -47,8 +44,8 @@ class App extends React.Component
 
         let options = {
             sectionClassName:       'section',
-            activeClass:            'active',
-            anchors:                ['anakint', 'aboutme', 'aboutme2'],
+            activeClass:            'current',
+            anchors:                ['anakint', 'aboutme', 'code', 'design', 'hack', 'skills', 'contact'],
             scrollBar:              false,
             navigation:             true,
             verticalAlign:          false,
@@ -59,7 +56,7 @@ class App extends React.Component
         };
 
         return (
-            <SectionsContainer id="App" class="App" ref={this.myRef} /*onScroll={this.onScroll}*/ {...options}>
+            <SectionsContainer id="App" class="App" ref={this.myRef} /*onScroll={this.handleScroll}*/ {...options}>
                 <Section>
                     <Banner />
                 </Section>
@@ -69,17 +66,20 @@ class App extends React.Component
                 <Section>
                     <Code />
                 </Section>
+                <Section>
+                    <Design />
+                </Section>
+                <Section>
+                    <Hack />
+                </Section>
+                <Section>
+                    <Skills />
+                </Section>
+                <Section>
+                    <Contact />
+                </Section>
             </SectionsContainer>
         );
-
-                /*<Code />
-                <Design />
-                <Hack />
-                <Music />
-                <Skills />
-                <Achievements />
-                <Interests />
-                <Contact />*/
     }
 }
 

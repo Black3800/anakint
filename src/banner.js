@@ -65,12 +65,12 @@ class Arrow extends React.Component
 
     render()
     {
-        const animate = (this.props.animationFinish) ? "arrow-container ghosting" : "arrow-container";
+        const animate = (this.props.animationFinish) ? "arrow-container active" : "arrow-container";
         return (
-            <a href="#aboutme" className={animate}>
+            <div id="arrowContainer" className={animate}>
                 <div className="arrow"></div>
                 <div className="arrow"></div>
-            </a>
+            </div>
         );
     }
 }

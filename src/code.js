@@ -1,23 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-
-class Heading extends React.Component {
-    constructor(props) {
-        super(props);
-        this.ref = React.createRef();
-        this.componentDidMount = this.componentDidMount.bind(this);
-    }
-
-    componentDidMount() {
-
-    }
-
-    render() {
-        return (
-            <div className="heading">{this.props.text}</div>
-        );
-    }
-}
+import Heading from './heading.js';
 
 class Code extends React.Component {
     render() {
