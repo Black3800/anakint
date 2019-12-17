@@ -289,8 +289,38 @@ code {
 
 .code
 {
-  background: #F05D5E;
+  background-color: #F05D5E;
   padding: 20px;
+}
+
+.code > img
+{
+  width: auto;
+  height: 100%;
+}
+
+.code > .textbox
+{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 500px;
+  height: 333px;
+  position: absolute;
+  right: 110px;
+  background: rgba(227, 216, 241, 0.8);
+  backdrop-filter: blur(15px);
+  border-radius: 9px;
+  color: #F05D5E;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-weight: lighter;
+  text-indent: 100px;
+}
+
+.code > .textbox > h2
+{
+  font-weight: normal;
 }
 
 /*********************/
