@@ -5,11 +5,12 @@ import Heading from './heading.js';
 class Hack extends React.Component {
     render() {
         return (
-            <div className="hack content-card">
+            <div className="hack content-card dark">
                 <div>
-                    <Fade>
-                        <Heading text="i_hack" dark="true"/>
-                    </Fade>
+                    <Heading text="i_hack" dark="true"/>
+                </div>
+                <div>
+                    Haxed by anakin
                 </div>
             </div>
         );

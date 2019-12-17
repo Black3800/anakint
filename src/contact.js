@@ -7,10 +7,9 @@ class Contact extends React.Component {
         return (
             <div className="contact content-card">
                 <div>
-                    <Fade>
-                        <Heading text="contact" />
-                    </Fade>
+                    <Heading text="contact" />
                 </div>
+                <div>fb.me/anakin.thanainantha</div>
             </div>
         );
     }
