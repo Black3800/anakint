@@ -5,17 +5,23 @@ import Heading from './heading.js';
 class Skills extends React.Component {
     render() {
         return (
-            <div className="skills content-card dark">
+            <div className="skills content-card">
                 <div>
-                    <Heading text="skills" dark="true" />
+                    <Heading text="skills" />
                 </div>
-                <p>
-                    Coding: C, C++, Java, Python, HTML, JavaScript, CSS, jQuery, PHP, MySQL, React.js, Arduino, Assembly
-                    <br />
-                    Cybersecurity: Web App Penetration Testing, Cryptography, Packet Analyzing, Reverse Engineering
-                    <br />
-                    Graphics: Photoshop, Illustrator, Lightroom, Maya, Cinema4D, Adobe Premiere Pro, After Effects, Vegas
-                </p>
+                <div class="textbox">
+                    <ul>
+                        <li>
+                            <span>Coding:</span> C, C++, Java, Python, HTML, JavaScript, CSS, jQuery, PHP, MySQL, React.js, Arduino, Assembly
+                        </li>
+                        <li>
+                            <span>Cybersecurity:</span> Web App Penetration Testing, Cryptography, Packet Analyzing, Reverse Engineering
+                        </li>
+                        <li>
+                            <span>Graphics:</span> Photoshop, Illustrator, Lightroom, Maya, Cinema4D, Adobe Premiere Pro, After Effects, Vegas
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     }

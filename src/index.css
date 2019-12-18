@@ -67,7 +67,7 @@ code {
 .Navigation-Anchor:nth-child(2)
 {
   background-color: rgba(227, 216, 241, 0.5)!important;
-  border: 0.5px solid #A770EF;
+  /*border: 0.5px solid #A770EF;*/
 }
 
 .Navigation-Anchor:nth-child(3)
@@ -101,6 +101,8 @@ code {
   font-size: 60px;
   font-family: Hack, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  font-weight: normal;
+  margin: 0px;
   align-self: flex-start;
   position: absolute;
   top: 10px;
@@ -328,8 +330,13 @@ code {
 
 .design
 {
-  background: #0F4C81;
+  background: #004b82;
   padding: 20px;
+}
+
+.design .heading
+{
+  color: #004b82;
 }
 
 .design > img
@@ -349,7 +356,7 @@ code {
   background: rgba(227, 216, 241, 0.8);
   backdrop-filter: blur(15px) brightness(150%);
   border-radius: 9px;
-  color: #0F4C81;
+  color: #004b82;
   padding: 30px;
   box-sizing: border-box;
   font-size: 22px;
@@ -367,8 +374,42 @@ code {
 
 .hack
 {
-  background: #ececec;
+  background: #0f9236;
   padding: 20px;
+}
+
+.hack .heading
+{
+  color: #0f9236;
+}
+
+.hack > img
+{
+  width: auto;
+  height: 100%;
+}
+
+.hack > .textbox
+{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 500px;
+  height: 333px;
+  position: absolute;
+  right: 110px;
+  background: rgba(227, 216, 241, 0.8);
+  backdrop-filter: blur(15px) brightness(150%);
+  border-radius: 9px;
+  color: #0f9236;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+.hack > .textbox > h2
+{
+  font-weight: normal;
 }
 
 /*********************/
@@ -377,9 +418,27 @@ code {
 
 .skills
 {
+  justify-content: center;
   background: #FDB99B;
   padding: 20px;
+  color: #F05D5E;
 }
+
+.skills .textbox
+{
+  align-self: center;
+  font-size: 22px;
+  font-weight: lighter;
+  border: 0.5px solid #F05D5E;
+  border-radius: 9px;
+  padding: 20px;
+}
+
+.skills span
+{
+  font-weight: normal;
+}
+
 
 /*********************/
 /****** CONTACT ******/
@@ -387,6 +446,49 @@ code {
 
 .contact
 {
+  justify-content: center;
   background: #A770EF;
   padding: 20px;
+}
+
+.contact > .textbox
+{
+  align-self: center;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+.contact > .links
+{
+  align-self: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact > .links > a
+{
+  width: 50px;
+  height: 50px;
+  margin: 50px;
+  opacity: 0.8;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.contact > .links > a:hover
+{
+  opacity: 0.9;
+}
+
+.contact > .links > a.fb
+{
+  background: url('/fb.png');
+  background-size: contain;
+}
+
+.contact > .links > a.mail
+{
+  background: url('/mail.png');
+  background-size: contain;
 }

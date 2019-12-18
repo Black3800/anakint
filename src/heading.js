@@ -14,7 +14,7 @@ class Heading extends React.Component {
     render() {
         let headingClass = (this.props.dark == "true") ? "heading dark" : "heading";
         return (
-            <div className={headingClass}>{this.props.text}</div>
+            <h1 className={headingClass}>{this.props.text}</h1>
         );
     }
 }

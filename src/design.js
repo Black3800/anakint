@@ -12,10 +12,10 @@ class Design extends React.Component {
                 <img srcSet="design@0,25x.jpg,
                              design@0,5x.jpg 1.5x,
                              design@0,75x.jpg 2x,
-                             design.jpg 2.5x" src="design.jpg" />
+                             design.jpg 2.5x" src="design.jpg" alt="Picture of me with my pen"/>
                 <div className="textbox">
                     <h2>For me, arts are like colors of life</h2>
-                    I do graphic designs, movie editing, and sometimes traditional art. Many has appreciated works that are made out of my creativity.
+                    I do graphic designs, movie editing, and sometimes traditional art. Many have appreciated works that are made out of my creativity.
                 </div>
             </div>
         );
