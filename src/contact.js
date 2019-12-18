@@ -11,8 +11,8 @@ class Contact extends React.Component {
                 </div>
                 <div className="textbox">Interested in me? Let's have a talk</div>
                 <div className="links">
-                    <a className="fb" href="https://fb.me/anakin.thanainantha"></a>
-                    <a className="mail" href="mailto: thanainantha.anakin@gmail.com"></a>
+                    <a className="fb" href="https://fb.me/anakin.thanainantha" target="_blank"></a>
+                    <a className="mail" href="mailto: thanainantha.anakin@gmail.com" target="_blank"></a>
                 </div>
             </div>
         );
