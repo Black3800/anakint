@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 import Heading from './heading.js';
 
 class Design extends React.Component {
@@ -15,7 +15,7 @@ class Design extends React.Component {
                              design.jpg 2.5x" src="design.jpg" alt="Picture of me with my pen"/>
                 <div className="textbox">
                     <h2>For me, arts are like colors of life</h2>
-                    I do graphic designs, movie editing, and sometimes traditional art. Many have appreciated works that are made out of my creativity.
+                    I do graphic designs, video editing, and sometimes traditional art. Many have appreciated works that are made out of my creativity.
                 </div>
             </div>
         );

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import ReactFullpage from '@fullpage/react-fullpage';
 import { SectionsContainer, Section } from 'react-fullpage';
-import './index.css';
 import Banner from './banner.js';
 import About from './about.js';
 import Code from './code.js';

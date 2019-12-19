@@ -11,9 +11,9 @@ class About extends React.Component
                 <div>
                     <Heading text="about_me" dark="true" />
                 </div>
-                <div class="center img" alt="Picture of myself"></div>
-                <p class="center">
-                    I am a student at Potisarnpittayakorn School. I started coding when I was 10. Simple HTML page I had built on that day sparked my interest in the computer field. Since that day, I have been continuously educating myself.
+                <div className="center img" alt="Picture of myself"></div>
+                <p className="center">
+                    I am a student at Poti&shy;sarn&shy;pit&shy;ta&shy;ya&shy;korn School. I started coding when I was 10. Simple HTML page I had built on that day sparked my interest in the computer field. Since that day, I have been con&shy;ti&shy;nuous&shy;ly educating myself.
                 </p>
             </div>
         );

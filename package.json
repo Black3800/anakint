@@ -1,6 +1,6 @@
 {
   "name": "anakint",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",

@@ -1,13 +1,13 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 import Heading from './heading.js';
 
 class Hack extends React.Component {
     render() {
         return (
-            <div className="hack content-card dark">
+            <div className="hack content-card">
                 <div>
-                    <Heading text="i_hack" dark="true"/>
+                    <Heading text="i_hack" />
                 </div>
                 <img srcSet="hack@0,25x.jpg,
                              hack@0,5x.jpg 1.5x,

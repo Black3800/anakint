@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+//import Fade from 'react-reveal/Fade';
 import Heading from './heading.js';
 
 class Skills extends React.Component {
@@ -9,7 +9,7 @@ class Skills extends React.Component {
                 <div>
                     <Heading text="skills" />
                 </div>
-                <div class="textbox">
+                <div className="textbox">
                     <ul>
                         <li>
                             <span>Coding:</span> C, C++, Java, Python, HTML, JavaScript, CSS, jQuery, PHP, MySQL, React.js, Arduino, Assembly
